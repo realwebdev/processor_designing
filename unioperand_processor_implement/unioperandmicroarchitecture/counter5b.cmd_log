@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "G:/MSCS/01_Advance_Computer_Architecture/projects/L1F21MSCS0054_unioperandmicroarchitecture/counter5b.xst" -ofn "G:/MSCS/01_Advance_Computer_Architecture/projects/L1F21MSCS0054_unioperandmicroarchitecture/counter5b.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-1 counter5b.ngc counter5b.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o counter5b_map.ncd counter5b.ngd counter5b.pcf 
+par -w -intstyle ise -ol high -mt off counter5b_map.ncd counter5b.ncd counter5b.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml counter5b.twx counter5b.ncd -o counter5b.twr counter5b.pcf 

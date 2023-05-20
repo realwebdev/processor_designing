@@ -1,0 +1,7 @@
+verilog work "pc16b.v"
+verilog work "ipcore_dir/im_code.v"
+verilog work "ipcore_dir/dm_code.v"
+verilog work "ControUnit.v"
+verilog work "ALU.v"
+verilog work "accumulator16b.v"
+verilog work "topmodule.v"
